@@ -1,0 +1,37 @@
+    <!-- (1) correcting the declaration from html to <!DOCTYPE html> -->
+    <!DOCTYPE html>
+    <!-- (2) correcting the second line from <head> to <html lang"en">-->
+    <html lang"en">
+    <head>
+
+    <!-- (3) below the <head> next line is <meta charset="UTF-8"> not <title>Home</title>-->
+    <meta charset="UTF-8">
+  
+    <!-- (4) next line is not <script> and I also corrected the code by deleting user-scalable=no, maximum-scale=1"> -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <!-- (5) Next line is <title> not style.css link-->
+     <title>Home</title>
+
+     <!--(6) next line is description not charset-->
+     <meta name="description" content="Welcome"/>
+
+     <!-- (7) next line is css link-->
+    <link href="style.css">
+
+    <!--(8)next line is <script> not og:title-->
+    <script src="test.js"></script>
+
+    <!--(9) is og:title not og:image-->
+    <meta name="og:title" content="Our Site">
+     <meta property="og:image" content="images/preview.jpg">
+     </head>
+
+     <body>
+     <!-- (10)I removed the h1 tag from the head and wrote it inside the body-->
+  <h1>Welcome to our website</h1>
+  <p>We sell shoes in Aba.</p>
+
+  <button id="order-btn">Order now</button>
+</body>
+</html>

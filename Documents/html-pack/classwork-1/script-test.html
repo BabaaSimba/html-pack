@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script test</title>
+     <script src="test.js" defer></script>
+    
+
+  </head>
+  <body>
+   
+    <button id="order-btn">Order Now</button>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>placement</th>
+          <th>console results</th>
+          <th>explanation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>at the head with no attribute</td>
+          <td>null</td>
+          <td>
+            the script ran immediately but the browser hadn't reached the button
+            in the body yet so it couln't find it
+          </td>
+
+          <tr>
+            <td>in the head with with defer</td>
+            <td><button id="order-btn">Order Now</button></td>
+            <td>the word defer told the browser to wait until the whole page finished loading before running the script</td>
+
+          </tr>
+          <tr>
+            <td>at the end of the body with no attributes</td>
+            <td><button id="order-btn">Order Now</button></td>
+            <td>the browser ran the button first from top to bottom,so the button already existed when the script ran</td>
+          </tr>
+          <td>at the top of the body before button</td>
+          <td>null</td>
+          <td>the script was above the button, so it ran too early before the button was created</td>
+        </tr>
+      </tbody>
+    </table>
+    
+
+  </body>
+</html>
